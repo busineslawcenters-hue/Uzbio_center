@@ -1,6 +1,7 @@
 import asyncio
 import logging
 import os
+import re
 
 from dotenv import load_dotenv
 
@@ -102,7 +103,7 @@ TEXTS = {
             "Регион: {region}\n\n"
             "Наш менеджер свяжется с вами в ближайшее время."
         ),
-        "need_contact": "Пожалуйста, воспользуйтесь кнопкой ниже, чтобы отправить номер.",
+        "need_contact": "Пожалуйста, воспользуйтесь кнопкой ниже, чтобы отправить номер, либо введите его вручную (например: +998901234567).",
         "need_age": "Пожалуйста, введите возраст цифрами, например: 35",
     },
     "uz": {
@@ -122,7 +123,7 @@ TEXTS = {
             "Hudud: {region}\n\n"
             "Bizning menejerimiz siz bilan tez orada bog'lanadi."
         ),
-        "need_contact": "Iltimos, pastdagi tugma orqali raqamni yuboring.",
+        "need_contact": "Iltimos, pastdagi tugma orqali yoki qo'lda kiriting (masalan: +998901234567).",
         "need_age": "Iltimos, yoshingizni raqamlar bilan kiriting, masalan: 35",
     },
 }
@@ -210,15 +211,38 @@ async def process_lang(callback: CallbackQuery, state: FSMContext):
     await callback.answer()
 
 
-@router.message(Form.phone, F.contact)
-async def process_phone(message: Message, state: FSMContext):
+PHONE_RE = re.compile(r"^\+?\d[\d\s\-\(\)]{6,17}\d$")
+
+
+async def _accept_phone(message: Message, state: FSMContext, phone: str):
     data = await state.get_data()
     lang = data["lang"]
-    await state.update_data(phone=message.contact.phone_number)
+    await state.update_data(phone=phone)
     await message.answer("👍", reply_markup=ReplyKeyboardRemove())
     await message.answer(TEXTS[lang]["ask_product"])
     await send_products(message, lang, state)
     await state.set_state(Form.product)
+
+
+@router.message(Form.phone, F.contact)
+async def process_phone(message: Message, state: FSMContext):
+    await _accept_phone(message, state, message.contact.phone_number)
+
+
+@router.message(Form.phone, F.text)
+async def process_phone_text(message: Message, state: FSMContext):
+    # Принимаем номер, введённый вручную текстом — важно для случаев,
+    # когда кнопка "поделиться контактом" недоступна (например, у аккаунтов
+    # без привязанного номера, у модерации Telegram Ads при автоматической
+    # проверке бота, или если пользователь просто набрал номер сам).
+    text = message.text.strip()
+    if PHONE_RE.match(text):
+        await _accept_phone(message, state, text)
+        return
+
+    data = await state.get_data()
+    lang = data.get("lang", "ru")
+    await message.answer(TEXTS[lang]["need_contact"], reply_markup=phone_keyboard(lang))
 
 
 @router.message(Form.phone)
