@@ -49,16 +49,250 @@ PRODUCTS = {
         "ru": "«KRISTALL»",
         "uz": "«KRISTALL» ",
         "photo": "product1.jpg",
+        "desc": {
+            "uz": (
+                "KRISTALL nima?\n\n"
+                "KRISTALL — ko'z salomatligi va ko'rish organlarining normal fiziologik faoliyatini "
+                "qo'llab-quvvatlashga mo'ljallangan vitaminlar, aminokislotalar va biologik faol "
+                "moddalardan tashkil topgan kompleks.\n\n"
+                "Ayniqsa telefon, kompyuter va boshqa ekranlar qarshisida ko'p vaqt o'tkazadigan "
+                "insonlar uchun mos.\n\n"
+                "Asosiy tarkibi:\n"
+                "• Chernika ekstrakti — 200 mg\n"
+                "• Lutein — 10 mg\n"
+                "• Taurin — 100 mg\n"
+                "• A vitamini\n"
+                "• E vitamini — 10 mg\n\n"
+                "Qanday foyda beradi?\n"
+                "• Lutein — ko'z to'r pardasi tarkibida uchraydigan muhim pigmentlardan biri bo'lib, "
+                "ko'rish tizimining normal faoliyatida ishtirok etadi.\n"
+                "• Chernika tarkibidagi biologik faol moddalar ko'z salomatligini qo'llab-quvvatlash "
+                "uchun qo'llanadi.\n"
+                "• Taurin ko'z to'qimalaridagi metabolik va energetik jarayonlarda ishtirok etuvchi "
+                "aminokislotadir.\n"
+                "• A va E vitaminlari esa antioksidant himoya hamda ko'rish tizimining normal "
+                "faoliyatini qo'llab-quvvatlashda muhim ahamiyatga ega.\n\n"
+                "KRISTALL:\n"
+                "• ko'zlarning tez charchashida;\n"
+                "• telefon va kompyuterda uzoq ishlaganda;\n"
+                "• uzoq vaqt kitob o'qiganda;\n"
+                "• yuqori vizual yuklama vaqtida;\n"
+                "• ko'rish organlarining normal faoliyatini saqlashda;\n"
+                "• ko'z to'qimalarini antioksidant himoya bilan ta'minlashda qo'shimcha yordam "
+                "berishi mumkin.\n\n"
+                "Kimlar uchun?\n"
+                "• kompyuterda ko'p ishlaydiganlar;\n"
+                "• telefondan muntazam foydalanadiganlar;\n"
+                "• uzoq vaqt o'qiydigan talabalar va o'quvchilar;\n"
+                "• ko'zlari tez charchaydigan insonlar;\n"
+                "• ko'z salomatligini vitamin va mikroelementlar bilan qo'llab-quvvatlashni "
+                "istaganlar.\n\n"
+                "Qo'llash usuli:\n"
+                "• Kattalar: ovqatdan 30 daqiqa keyin 1 kapsuladan kuniga 2 mahal.\n"
+                "• 6 yoshdan katta bolalar: 1 kapsuladan kuniga 1 mahal.\n"
+                "• Tavsiya etilgan kurs: 30 kun."
+            ),
+            "ru": (
+                "Что такое KRISTALL?\n\n"
+                "KRISTALL — комплекс витаминов, аминокислот и биологически активных веществ, "
+                "предназначенный для поддержки здоровья глаз и нормальной физиологической функции "
+                "органов зрения.\n\n"
+                "Особенно подходит людям, которые проводят много времени перед телефоном, "
+                "компьютером и другими экранами.\n\n"
+                "Основной состав:\n"
+                "• Экстракт черники — 200 мг\n"
+                "• Лютеин — 10 мг\n"
+                "• Таурин — 100 мг\n"
+                "• Витамин A\n"
+                "• Витамин E — 10 мг\n\n"
+                "Какую пользу приносит?\n"
+                "• Лютеин — один из важных пигментов, содержащихся в сетчатке глаза, участвует в "
+                "нормальном функционировании зрительной системы.\n"
+                "• Биологически активные вещества, содержащиеся в чернике, применяются для "
+                "поддержки здоровья глаз.\n"
+                "• Таурин — аминокислота, участвующая в метаболических и энергетических процессах "
+                "в тканях глаза.\n"
+                "• Витамины A и E играют важную роль в антиоксидантной защите и поддержании "
+                "нормального функционирования зрительной системы.\n\n"
+                "KRISTALL может оказать дополнительную поддержку:\n"
+                "• при быстрой утомляемости глаз;\n"
+                "• при длительной работе за телефоном и компьютером;\n"
+                "• при длительном чтении книг;\n"
+                "• при высокой зрительной нагрузке;\n"
+                "• для поддержания нормального функционирования органов зрения;\n"
+                "• для обеспечения антиоксидантной защиты тканей глаза.\n\n"
+                "Для кого?\n"
+                "• для людей, много работающих за компьютером;\n"
+                "• для тех, кто регулярно пользуется телефоном;\n"
+                "• для студентов и школьников, много читающих;\n"
+                "• для людей с быстрой утомляемостью глаз;\n"
+                "• для тех, кто хочет поддержать здоровье глаз витаминами и микроэлементами.\n\n"
+                "Способ применения:\n"
+                "• Взрослым: по 1 капсуле 2 раза в день через 30 минут после еды.\n"
+                "• Детям старше 6 лет: по 1 капсуле 1 раз в день.\n"
+                "• Рекомендуемый курс: 30 дней."
+            ),
+        },
     },
     "product_2": {
         "ru": "«A9 ANDROBÓSS»",
         "uz": "«A9 ANDROBÓSS»",
         "photo": "product2.jpg",
+        "desc": {
+            "uz": (
+                "A9 ANDROBOSS nima?\n\n"
+                "A9 ANDROBOSS — erkaklar organizmi va jinsiy faoliyatini qo'llab-quvvatlashga "
+                "mo'ljallangan biologik faol qo'shimcha.\n\n"
+                "Mahsulot tarkibidagi jenshen, evrikoma, tribulus, rux, selen hamda vitaminlar "
+                "organizmning umumiy tonusi, jismoniy faollik va erkaklar reproduktiv tizimini "
+                "qo'llab-quvvatlashga yordam beradi.\n\n"
+                "Asosiy tarkibi:\n"
+                "• Jenshen ekstrakti — 50 mg\n"
+                "• Evrikoma ildizi — 200 mg\n"
+                "• Tribulus ildizi — 500 mg\n"
+                "• C vitamini — 25 mg\n"
+                "• Rux oksidi — 20 mg\n"
+                "• Natriy selenit — 50 mkg\n"
+                "• E vitamini — 50 mg\n\n"
+                "Qanday foyda beradi?\n"
+                "• jismoniy va ruhiy charchoq paytida organizmni qo'llab-quvvatlashga;\n"
+                "• erkaklarning jinsiy faolligi va umumiy tonusini saqlashga;\n"
+                "• normal testosteron almashinuvini qo'llab-quvvatlashga;\n"
+                "• spermatogenez va spermatozoidlarning normal harakatchanligini "
+                "qo'llab-quvvatlashga;\n"
+                "• erkaklar reproduktiv tizimining normal faoliyatini saqlashga yordam berishi "
+                "mumkin.\n\n"
+                "Tarkibidagi rux erkaklar reproduktiv salomatligi va immun tizimi uchun muhim "
+                "mikroelementlardan biri hisoblanadi.\n\n"
+                "Mahsulot erkaklarda:\n"
+                "• jinsiy faollik pasayganda;\n"
+                "• jismoniy va ruhiy charchoq kuchayganda;\n"
+                "• reproduktiv tizim faoliyatini qo'llab-quvvatlash zarur bo'lganda;\n"
+                "• spermatozoidlar soni yoki harakatchanligi bilan bog'liq holatlarda qo'shimcha "
+                "vosita sifatida tavsiya etilishi mumkin.\n\n"
+                "Qo'llash usuli:\n"
+                "1 tabletkadan kuniga 1–2 mahal, ovqatdan keyin qabul qilinadi."
+            ),
+            "ru": (
+                "Что такое A9 ANDROBOSS?\n\n"
+                "A9 ANDROBOSS — биологически активная добавка, предназначенная для поддержки "
+                "мужского организма и половой функции.\n\n"
+                "Входящие в состав женьшень, элеутерококк, трибулус, цинк, селен и витамины "
+                "способствуют поддержанию общего тонуса организма, физической активности и "
+                "мужской репродуктивной системы.\n\n"
+                "Основной состав:\n"
+                "• Экстракт женьшеня — 50 мг\n"
+                "• Корень элеутерококка — 200 мг\n"
+                "• Корень трибулуса — 500 мг\n"
+                "• Витамин C — 25 мг\n"
+                "• Оксид цинка — 20 мг\n"
+                "• Селенит натрия — 50 мкг\n"
+                "• Витамин E — 50 мг\n\n"
+                "Какую пользу приносит?\n"
+                "Может способствовать:\n"
+                "• поддержке организма при физической и психической усталости;\n"
+                "• поддержанию половой активности и общего тонуса у мужчин;\n"
+                "• поддержке нормального обмена тестостерона;\n"
+                "• поддержке сперматогенеза и нормальной подвижности сперматозоидов;\n"
+                "• поддержанию нормального функционирования мужской репродуктивной системы.\n\n"
+                "Входящий в состав цинк является одним из важных микроэлементов для мужского "
+                "репродуктивного здоровья и иммунной системы.\n\n"
+                "Продукт может быть рекомендован мужчинам в качестве дополнительного средства:\n"
+                "• при снижении половой активности;\n"
+                "• при повышенной физической и психической усталости;\n"
+                "• при необходимости поддержки репродуктивной системы;\n"
+                "• при состояниях, связанных с количеством или подвижностью сперматозоидов.\n\n"
+                "Способ применения:\n"
+                "По 1 таблетке 1–2 раза в день, после еды."
+            ),
+        },
     },
     "product_3": {
         "ru": "«S9 SUSTAV PRO MAX»",
         "uz": "«S9 SUSTAV PRO MAX»",
         "photo": "product3.jpg",
+        "desc": {
+            "uz": (
+                "S9 SUSTAV PRO MAX nima?\n\n"
+                "S9 SUSTAV PRO MAX — bo'g'im, tog'ay, pay va suyak tizimini qo'llab-quvvatlashga "
+                "mo'ljallangan biologik faol qo'shimcha.\n\n"
+                "Mahsulot tarkibida tog'ay to'qimalarining muhim komponentlari hisoblangan "
+                "glyukozamin, xondroitin va kollagen, shuningdek kaltsiy va vitaminlar mavjud.\n\n"
+                "Asosiy tarkibi:\n"
+                "• Kollagen — 20 mg\n"
+                "• Glyukozamin gidroxloridi — 400 mg\n"
+                "• Xondroitin sulfat — 400 mg\n"
+                "• Kaltsiy glitserofosfat — 100 mg\n"
+                "• D3 vitamini — 5 mkg\n"
+                "• Kaltsiy karbonat — 200 mg\n"
+                "• Askorbin kislota — 30 mg\n\n"
+                "Qanday foyda beradi?\n\n"
+                "S9 tarkibidagi:\n"
+                "• Glyukozamin — tog'ay to'qimasining tarkibiy qismlaridan biri bo'lib, "
+                "bo'g'imlarning harakatchanligini qo'llab-quvvatlaydi.\n"
+                "• Xondroitin — tog'ay va biriktiruvchi to'qimalarning tabiiy komponentlaridan "
+                "biri.\n"
+                "• Kollagen — biriktiruvchi to'qimalarning muhim oqsili bo'lib, tog'ay, pay va "
+                "boshqa to'qimalar tarkibida mavjud.\n\n"
+                "Kaltsiy va D3 vitamini esa suyak tizimining normal holatini saqlashda muhim rol "
+                "o'ynaydi.\n\n"
+                "Kompleks:\n"
+                "• bo'g'imlarning normal harakatchanligini saqlashga;\n"
+                "• tog'ay va biriktiruvchi to'qimalarni qo'llab-quvvatlashga;\n"
+                "• jismoniy yuklama vaqtida bo'g'imlarga tushadigan zo'riqishni yengillashtirishga;\n"
+                "• suyaklar, paylar va bo'g'imlarning normal holatini saqlashga yordam beradi.\n\n"
+                "Kimlar uchun?\n"
+                "• faol hayot tarzini olib boradigan insonlar;\n"
+                "• sportchilar, ayniqsa kuch va dinamik sport turlari bilan shug'ullanuvchilar;\n"
+                "• bo'g'imlariga muntazam jismoniy yuklama tushadiganlar;\n"
+                "• katta yoshdagi insonlar;\n"
+                "• suyak, pay, tog'ay va bo'g'imlarni qo'llab-quvvatlashni istaganlar.\n\n"
+                "Qo'llash usuli:\n"
+                "Kattalar uchun — 1 tabletkadan kuniga 2 mahal, ovqat vaqtida.\n\n"
+                "Tavsiya etilgan kurs: 1 oy.\n"
+                "Shifokor tavsiyasiga ko'ra kursni takrorlash mumkin."
+            ),
+            "ru": (
+                "Что такое S9 SUSTAV PRO MAX?\n\n"
+                "S9 SUSTAV PRO MAX — биологически активная добавка, предназначенная для "
+                "поддержки суставов, хрящевой ткани, связок и костной системы.\n\n"
+                "В состав продукта входят глюкозамин, хондроитин и коллаген — важные компоненты "
+                "хрящевой ткани, а также кальций и витамины.\n\n"
+                "Основной состав:\n"
+                "• Коллаген — 20 мг\n"
+                "• Глюкозамина гидрохлорид — 400 мг\n"
+                "• Хондроитина сульфат — 400 мг\n"
+                "• Кальция глицерофосфат — 100 мг\n"
+                "• Витамин D3 — 5 мкг\n"
+                "• Карбонат кальция — 200 мг\n"
+                "• Аскорбиновая кислота — 30 мг\n\n"
+                "Какую пользу приносит?\n\n"
+                "В составе S9:\n"
+                "• Глюкозамин — один из структурных компонентов хрящевой ткани, поддерживает "
+                "подвижность суставов.\n"
+                "• Хондроитин — один из естественных компонентов хрящевой и соединительной "
+                "ткани.\n"
+                "• Коллаген — важный белок соединительной ткани, входящий в состав хрящей, связок "
+                "и других тканей.\n\n"
+                "Кальций и витамин D3 играют важную роль в поддержании нормального состояния "
+                "костной системы.\n\n"
+                "Комплекс способствует:\n"
+                "• поддержанию нормальной подвижности суставов;\n"
+                "• поддержке хрящевой и соединительной ткани;\n"
+                "• снижению нагрузки на суставы при физических нагрузках;\n"
+                "• поддержанию нормального состояния костей, связок и суставов.\n\n"
+                "Для кого?\n"
+                "• для людей, ведущих активный образ жизни;\n"
+                "• для спортсменов, особенно занимающихся силовыми и динамичными видами спорта;\n"
+                "• для тех, чьи суставы регулярно подвергаются физическим нагрузкам;\n"
+                "• для людей старшего возраста;\n"
+                "• для тех, кто хочет поддержать кости, связки, хрящи и суставы.\n\n"
+                "Способ применения:\n"
+                "Взрослым — по 1 таблетке 2 раза в день, во время еды.\n\n"
+                "Рекомендуемый курс: 1 месяц.\n"
+                "Курс можно повторить по рекомендации врача."
+            ),
+        },
     },
 }
 
@@ -87,8 +321,8 @@ SELECT_BTN = {"ru": "✅ Выбрать", "uz": "✅ Tanlash"}
 TEXTS = {
     "choose_lang": "Выберите язык / Tilni tanlang",
     "ru": {
-        "welcome": "Здравствуйте! 👋\nЭто бот для оформления заявки.",
-        "ask_phone": "Пожалуйста, отправьте ваш номер телефона, нажав на кнопку ниже.",
+        "welcome": "Здравствуйте! 👋\nЭто официальный бот Uzbio Center для оформления заявки.",
+        "ask_phone": "Пожалуйста, отправьте ваш номер телефона, нажав на кнопку ниже.\nВаш номер используется только для связи с вами.",
         "phone_btn": "📱 Отправить номер телефона",
         "ask_product": "Выберите продукт, который вас интересует:",
         "ask_name": "Введите вашу Фамилию и Имя:",
@@ -107,8 +341,8 @@ TEXTS = {
         "need_age": "Пожалуйста, введите возраст цифрами, например: 35",
     },
     "uz": {
-        "welcome": "Assalomu alaykum! 👋\nBu ariza topshirish uchun bot.",
-        "ask_phone": "Iltimos, quyidagi tugma orqali telefon raqamingizni yuboring.",
+        "welcome": "Assalomu alaykum! 👋\nBu — Uzbio Center'ning rasmiy ariza topshirish boti.",
+        "ask_phone": "Iltimos, quyidagi tugma orqali telefon raqamingizni yuboring.\nRaqamingiz faqat siz bilan bog'lanish uchun ishlatiladi.",
         "phone_btn": "📱 Telefon raqamni yuborish",
         "ask_product": "Sizni qiziqtirgan mahsulotni tanlang:",
         "ask_name": "Familiya va ismingizni kiriting:",
@@ -181,6 +415,11 @@ async def send_products(message: Message, lang: str, state: FSMContext):
             sent = await message.answer(caption, reply_markup=kb)
 
         sent_messages.append({"chat_id": sent.chat.id, "message_id": sent.message_id})
+
+        # отправляем подробное описание продукта отдельным сообщением под карточкой
+        desc = data.get("desc", {}).get(lang)
+        if desc:
+            await message.answer(desc)
 
     await state.update_data(product_messages=sent_messages)
 
