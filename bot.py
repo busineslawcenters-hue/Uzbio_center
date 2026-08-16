@@ -322,8 +322,7 @@ TEXTS = {
     "choose_lang": "Выберите язык / Tilni tanlang",
     "ru": {
         "welcome": "Здравствуйте! 👋\nЭто официальный бот Uzbio Center для оформления заявки.",
-        "ask_phone": "Пожалуйста, отправьте ваш номер телефона, нажав на кнопку ниже.\nВаш номер используется только для связи с вами.",
-        "phone_btn": "📱 Отправить номер телефона",
+        "ask_phone": "Пожалуйста, напишите ваш номер телефона текстом (например: +998901234567).\nВаш номер используется только для связи с вами.",
         "ask_product": "Выберите продукт, который вас интересует:",
         "ask_name": "Введите вашу Фамилию и Имя:",
         "ask_age": "Укажите ваш возраст:",
@@ -337,13 +336,12 @@ TEXTS = {
             "Регион: {region}\n\n"
             "Наш менеджер свяжется с вами в ближайшее время."
         ),
-        "need_contact": "Пожалуйста, воспользуйтесь кнопкой ниже, чтобы отправить номер, либо введите его вручную (например: +998901234567).",
+        "need_contact": "Пожалуйста, введите номер телефона текстом, например: +998901234567",
         "need_age": "Пожалуйста, введите возраст цифрами, например: 35",
     },
     "uz": {
         "welcome": "Assalomu alaykum! 👋\nBu — Uzbio Center'ning rasmiy ariza topshirish boti.",
-        "ask_phone": "Iltimos, quyidagi tugma orqali telefon raqamingizni yuboring.\nRaqamingiz faqat siz bilan bog'lanish uchun ishlatiladi.",
-        "phone_btn": "📱 Telefon raqamni yuborish",
+        "ask_phone": "Iltimos, telefon raqamingizni matn ko'rinishida yozing (masalan: +998901234567).\nRaqamingiz faqat siz bilan bog'lanish uchun ishlatiladi.",
         "ask_product": "Sizni qiziqtirgan mahsulotni tanlang:",
         "ask_name": "Familiya va ismingizni kiriting:",
         "ask_age": "Yoshingizni kiriting:",
@@ -357,7 +355,7 @@ TEXTS = {
             "Hudud: {region}\n\n"
             "Bizning menejerimiz siz bilan tez orada bog'lanadi."
         ),
-        "need_contact": "Iltimos, pastdagi tugma orqali yoki qo'lda kiriting (masalan: +998901234567).",
+        "need_contact": "Iltimos, telefon raqamingizni matn ko'rinishida kiriting, masalan: +998901234567",
         "need_age": "Iltimos, yoshingizni raqamlar bilan kiriting, masalan: 35",
     },
 }
@@ -382,14 +380,6 @@ def lang_keyboard() -> InlineKeyboardMarkup:
             InlineKeyboardButton(text="🇺🇿 O'zbekcha", callback_data="lang_uz"),
         ]
     ])
-
-
-def phone_keyboard(lang: str) -> ReplyKeyboardMarkup:
-    return ReplyKeyboardMarkup(
-        keyboard=[[KeyboardButton(text=TEXTS[lang]["phone_btn"], request_contact=True)]],
-        resize_keyboard=True,
-        one_time_keyboard=True,
-    )
 
 
 async def send_products(message: Message, lang: str, state: FSMContext):
@@ -445,7 +435,7 @@ async def process_lang(callback: CallbackQuery, state: FSMContext):
     await state.update_data(lang=lang)
     await callback.message.edit_reply_markup(reply_markup=None)
     await callback.message.answer(TEXTS[lang]["welcome"])
-    await callback.message.answer(TEXTS[lang]["ask_phone"], reply_markup=phone_keyboard(lang))
+    await callback.message.answer(TEXTS[lang]["ask_phone"], reply_markup=ReplyKeyboardRemove())
     await state.set_state(Form.phone)
     await callback.answer()
 
@@ -463,17 +453,8 @@ async def _accept_phone(message: Message, state: FSMContext, phone: str):
     await state.set_state(Form.product)
 
 
-@router.message(Form.phone, F.contact)
-async def process_phone(message: Message, state: FSMContext):
-    await _accept_phone(message, state, message.contact.phone_number)
-
-
 @router.message(Form.phone, F.text)
 async def process_phone_text(message: Message, state: FSMContext):
-    # Принимаем номер, введённый вручную текстом — важно для случаев,
-    # когда кнопка "поделиться контактом" недоступна (например, у аккаунтов
-    # без привязанного номера, у модерации Telegram Ads при автоматической
-    # проверке бота, или если пользователь просто набрал номер сам).
     text = message.text.strip()
     if PHONE_RE.match(text):
         await _accept_phone(message, state, text)
@@ -481,14 +462,14 @@ async def process_phone_text(message: Message, state: FSMContext):
 
     data = await state.get_data()
     lang = data.get("lang", "ru")
-    await message.answer(TEXTS[lang]["need_contact"], reply_markup=phone_keyboard(lang))
+    await message.answer(TEXTS[lang]["need_contact"])
 
 
 @router.message(Form.phone)
 async def process_phone_invalid(message: Message, state: FSMContext):
     data = await state.get_data()
     lang = data.get("lang", "ru")
-    await message.answer(TEXTS[lang]["need_contact"], reply_markup=phone_keyboard(lang))
+    await message.answer(TEXTS[lang]["need_contact"])
 
 
 @router.callback_query(Form.product, F.data.in_(list(PRODUCTS.keys())))
